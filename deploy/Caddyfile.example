@@ -1,0 +1,32 @@
+# Replace example.invalid domains with domains you control.
+# Dedicated self-hosted installation example; adapt paths locally.
+api.example.invalid {
+    reverse_proxy 127.0.0.1:3001
+}
+
+example.invalid {
+    handle /api/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle /analytics/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle {
+        root * /srv/miaoda/site
+        file_server
+    }
+}
+
+m.example.invalid {
+    handle /api/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle /ws/* {
+        reverse_proxy 127.0.0.1:3001
+    }
+    handle {
+        root * /srv/miaoda/mobile
+        try_files {path} /index.html
+        file_server
+    }
+}

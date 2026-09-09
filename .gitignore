@@ -1,0 +1,70 @@
+# Local secrets. Commit only documented examples.
+.codex/
+.claude/
+.codex-tmp/
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials*.json
+service-account*.json
+*.zip
+*.7z
+*.tar
+*.gz
+.env
+.env.*
+!.env.example
+!*.env.example
+
+# Dependencies and generated frontend/Electron output.
+node_modules/
+dist/
+dist-electron/
+release/
+target/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Legacy/local model artifacts are not part of the Miaoda distribution.
+miaoda-desktop/resources/models/
+
+# Compiled applications and native output.
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+*.node
+miaoda-server-linux-*
+miaoda-go-server/bin/
+
+# Runtime data, backups, and logs.
+data/
+!miaoda-desktop/src/data/
+!miaoda-desktop/src/data/jobCategories.ts
+backups/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+logs/
+*.pid
+
+# Temporary/test output.
+tmp/
+temp/
+.cache/
+playwright-report/
+test-results/
+
+# Editors and operating systems.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
